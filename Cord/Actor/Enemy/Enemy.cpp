@@ -58,6 +58,7 @@ void Enemy::ReSpawnUpdate() {
 		isAlive_ = true;
 		spawnTimer_ = maxSpawnTime_;
 
+		SetNextTargetPoint();
 		CurrentUpdate = &Enemy::Wait2NextTargetPointUpdate;
 		return;
 	}
