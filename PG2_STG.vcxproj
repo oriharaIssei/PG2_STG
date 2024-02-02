@@ -61,7 +61,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)/Cord/Actor;$(ProjectDir)/Cord/Scene;$(ProjectDir)/Cord/MyMath;$(ProjectDir)/Cord/UI;$(ProjectDir)/Cord/Manager;$(ProjectDir)/Cord;$(ProjectDir);C:\KamataEngine\DirectXGame\math;C:\KamataEngine\DirectXGame\2d;C:\KamataEngine\DirectXGame\3d;C:\KamataEngine\DirectXGame\audio;C:\KamataEngine\DirectXGame\base;C:\KamataEngine\DirectXGame\input;C:\KamataEngine\DirectXGame\scene;C:\KamataEngine\External\DirectXTex\include;C:\KamataEngine\External\imgui;C:\KamataEngine\Adapter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/Cord/Actor/Bullet;$(ProjectDir)/Cord/Actor/Enemy;$(ProjectDir)/Cord/Actor/Player;$(ProjectDir)/Cord/Actor;$(ProjectDir)/Cord/Scene/Play;$(ProjectDir)/Cord/Scene/Title;$(ProjectDir)/Cord/Scene;$(ProjectDir)/Cord/MyMath;$(ProjectDir)/Cord/UI;$(ProjectDir)/Cord/Manager;$(ProjectDir)/Cord;$(ProjectDir);C:\KamataEngine\DirectXGame\math;C:\KamataEngine\DirectXGame\2d;C:\KamataEngine\DirectXGame\3d;C:\KamataEngine\DirectXGame\audio;C:\KamataEngine\DirectXGame\base;C:\KamataEngine\DirectXGame\input;C:\KamataEngine\DirectXGame\scene;C:\KamataEngine\External\DirectXTex\include;C:\KamataEngine\External\imgui;C:\KamataEngine\Adapter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <TreatWarningAsError>true</TreatWarningAsError>
@@ -108,7 +108,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cord\Actor\Bullet.cpp" />
+    <ClCompile Include="Cord\Actor\Bullet\Bullet.cpp" />
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp" />
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp" />
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\WinApp.cpp" />
@@ -117,8 +117,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
     <ClCompile Include="Cord\Actor\Actor.cpp" />
-    <ClCompile Include="Cord\Actor\Enemy.cpp" />
-    <ClCompile Include="Cord\Actor\Player.cpp" />
+    <ClCompile Include="Cord\Actor\Enemy\Enemy.cpp" />
+    <ClCompile Include="Cord\Actor\Player\Player.cpp" />
     <ClCompile Include="Cord\Manager\SceneTraditionManager.cpp" />
     <ClCompile Include="Cord\MyMath\Easing.cpp" />
     <ClCompile Include="Cord\UI\Button.cpp" />
@@ -126,8 +126,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="Cord\MyMath\Color.cpp" />
     <ClCompile Include="Cord\DrawFunction.cpp" />
     <ClCompile Include="Cord\Scene\IScene.cpp" />
-    <ClCompile Include="Cord\Scene\Play.cpp" />
-    <ClCompile Include="Cord\Scene\Title.cpp" />
+    <ClCompile Include="Cord\Scene\Play\Play.cpp" />
+    <ClCompile Include="Cord\Scene\Title\Title.cpp" />
     <ClCompile Include="Cord\MyMath\Vec2.cpp" />
     <ClCompile Include="Cord\Manager\InputManager.cpp" />
     <ClCompile Include="Cord\main.cpp" />
@@ -135,7 +135,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="Cord\Manager\GameManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cord\Actor\Bullet.h" />
+    <ClInclude Include="Cord\Actor\Bullet\Bullet.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\base\StringUtility.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\math\Matrix4x4.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\math\Vector2.h" />
@@ -164,8 +164,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h" />
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
     <ClInclude Include="Cord\Actor\Actor.h" />
-    <ClInclude Include="Cord\Actor\Enemy.h" />
-    <ClInclude Include="Cord\Actor\Player.h" />
+    <ClInclude Include="Cord\Actor\Enemy\Enemy.h" />
+    <ClInclude Include="Cord\Actor\Player\Player.h" />
     <ClInclude Include="Cord\Manager\SceneTraditionManager.h" />
     <ClInclude Include="Cord\MyMath\Easing.h" />
     <ClInclude Include="Cord\UI\Button.h" />
@@ -173,8 +173,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="Cord\MyMath\Color.h" />
     <ClInclude Include="Cord\DrawFunction.h" />
     <ClInclude Include="Cord\Scene\IScene.h" />
-    <ClInclude Include="Cord\Scene\Play.h" />
-    <ClInclude Include="Cord\Scene\Title.h" />
+    <ClInclude Include="Cord\Scene\Play\Play.h" />
+    <ClInclude Include="Cord\Scene\Title\Title.h" />
     <ClInclude Include="Cord\MyMath\Vec2.h" />
     <ClInclude Include="Cord\Manager\InputManager.h" />
     <ClInclude Include="Cord\Manager\SceneManager.h" />

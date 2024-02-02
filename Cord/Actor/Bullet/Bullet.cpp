@@ -9,10 +9,16 @@ void Bullet::Init() {
 	isAlive_ = true;
 
 	pos_ = Vec2f(host_->GetPos().x , host_->GetPos().y);
+
 	radius_ = 16.0f;
 
 	speed_ = 16.0f;
+
+	if (host_->GetBulletDir()!=Vec2f(0.0f,0.0f)) {
 	dir_ = host_->GetBulletDir();
+	} else {
+		dir_ = { 0.0f,1.0f };
+	}
 
 	color_ = 0xa4a8b4ff;
 }

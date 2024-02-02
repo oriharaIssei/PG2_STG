@@ -9,6 +9,7 @@ void Player::Init() {
 	isAlive_ = true;
 
 	pos_ = { 680.0f,560.0f };
+	dir_ = { 0.0f,0.0f };
 	radius_ = 24.0f;
 	speed_ = 8.0f;
 
@@ -44,9 +45,11 @@ void Player::Update() {
 }
 
 void Player::Draw() {
-	if (isAlive_) {
-		DrawCircle(pos_, radius_ , color_.Int());
+	if (!isAlive_) {
+		return;
 	}
+
+	DrawCircle(pos_, radius_, color_.Int());
 
 	for (auto bullet : bullets_) {
 		if (!bullet->GetIsAlive() 

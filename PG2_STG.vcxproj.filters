@@ -44,13 +44,13 @@
     <ClCompile Include="Cord\Actor\Actor.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="Cord\Actor\Player.cpp">
+    <ClCompile Include="Cord\Actor\Player\Player.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="Cord\Actor\Enemy.cpp">
+    <ClCompile Include="Cord\Actor\Enemy\Enemy.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="Cord\Actor\Bullet.cpp">
+    <ClCompile Include="Cord\Actor\Bullet\Bullet.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
     <ClCompile Include="Cord\Manager\CollisionManager.cpp">
@@ -59,10 +59,10 @@
     <ClCompile Include="Cord\Scene\IScene.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="Cord\Scene\Title.cpp">
+    <ClCompile Include="Cord\Scene\Title\Title.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="Cord\Scene\Play.cpp">
+    <ClCompile Include="Cord\Scene\Play\Play.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
     <ClCompile Include="Cord\Manager\SceneManager.cpp">
@@ -165,13 +165,13 @@
     <ClInclude Include="Cord\MyMath\Vec2.h" />
     <ClInclude Include="Cord\DrawFunction.h" />
     <ClInclude Include="Cord\Actor\Actor.h" />
-    <ClInclude Include="Cord\Actor\Player.h" />
-    <ClInclude Include="Cord\Actor\Enemy.h" />
-    <ClInclude Include="Cord\Actor\Bullet.h" />
+    <ClInclude Include="Cord\Actor\Player\Player.h" />
+    <ClInclude Include="Cord\Actor\Enemy\Enemy.h" />
+    <ClInclude Include="Cord\Actor\Bullet\Bullet.h" />
     <ClInclude Include="Cord\Manager\CollisionManager.h" />
     <ClInclude Include="Cord\Scene\IScene.h" />
-    <ClInclude Include="Cord\Scene\Title.h" />
-    <ClInclude Include="Cord\Scene\Play.h" />
+    <ClInclude Include="Cord\Scene\Title\Title.h" />
+    <ClInclude Include="Cord\Scene\Play\Play.h" />
     <ClInclude Include="Cord\Manager\SceneManager.h" />
     <ClInclude Include="Cord\MyMath\Color.h" />
     <ClInclude Include="Cord\UI\Button.h" />

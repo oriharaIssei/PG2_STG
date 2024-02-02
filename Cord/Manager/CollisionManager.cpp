@@ -19,13 +19,18 @@ CollisionManager::~CollisionManager() {
 }
 
 void CollisionManager::Update() {
-	for (auto giver : actors_) {
+	std::vector<Actor*>::iterator giverItr = actors_.begin();
+	for (; giverItr != actors_.end();++giverItr) {
+		Actor* giver = *giverItr;
 		if (giver == nullptr ||
 			!giver->GetIsAlive()) {
 			continue;
 		}
 
-		for (auto receiver : actors_) {
+		std::vector<Actor*>::iterator receiverItr = giverItr + 1;
+		for (; receiverItr != actors_.end();++receiverItr) {
+			Actor* receiver = *receiverItr;
+
 			if (receiver == nullptr ||
 				!receiver->GetIsAlive() ||
 				giver->GetType() == receiver->GetType()) {
